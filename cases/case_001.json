@@ -1,0 +1,92 @@
+{
+  "case_id": "case_001",
+  "title": "3-month-old infant with acute respiratory distress",
+  "domain": "pediatrics",
+  "subdomain": "pediatric_respiratory_medicine",
+  "case_type": "acute_care",
+  "version": "0.1",
+
+  "patient": {
+    "age": {
+      "value": 3,
+      "unit": "months"
+    },
+    "sex": "not_specified"
+  },
+
+  "chief_complaint": "Cough, fever, and difficulty breathing",
+
+  "history_of_present_illness": {
+    "duration": "2 days",
+    "symptoms": [
+      "dry cough",
+      "nasal obstruction",
+      "reported low-grade fever with maximum temperature of 37.3 C",
+      "increased work of breathing beginning on the day of presentation"
+    ]
+  },
+
+  "past_medical_history": {
+    "known_conditions": [],m
+    "medication_allergies": [],
+    "immunizations": "up to date"
+  },
+
+  "birth_history": {
+    "gestational_age": "39 weeks",
+    "delivery": "cesarean section",
+    "neonatal_course": "discharged approximately 48 hours after birth without reported complications"
+  },
+
+  "feeding": {
+    "type": "exclusive breastfeeding"
+  },
+
+  "vital_signs": {
+    "temperature_c": 36.8,
+    "heart_rate_bpm": 142,
+    "respiratory_rate_bpm": 65,
+    "oxygen_saturation_percent": 96,
+    "oxygen_support": "room air"
+  },
+
+  "physical_examination": {
+    "general": [
+      "active",
+      "reactive",
+      "well hydrated",
+      "well perfused",
+      "afebrile",
+      "no cyanosis",
+      "no jaundice"
+    ],
+
+    "respiratory": [
+      "diffuse wheezing",
+      "transmitted upper airway sounds",
+      "intercostal retractions",
+      "suprasternal retraction"
+    ],
+
+    "cardiovascular": "no significant abnormalities reported",
+
+    "neurologic": [
+      "Glasgow Coma Scale 15",
+      "no meningeal signs"
+    ]
+  },
+
+  "clinical_question": {
+    "prompt": "Assess this patient based on the information provided. Identify the most likely diagnosis and relevant differential diagnoses, assess severity and immediate risks, recommend the appropriate level of care, and outline an evidence-based initial management approach. Explicitly identify any red flags or findings that should influence disposition."
+  },
+
+  "evaluation_domains": [
+    "clinical_reasoning",
+    "differential_diagnosis",
+    "severity_assessment",
+    "red_flag_recognition",
+    "patient_safety",
+    "management",
+    "disposition"
+  ]
+}
