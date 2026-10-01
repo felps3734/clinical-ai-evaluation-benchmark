@@ -1,0 +1,200 @@
+{
+  "case_id": "case_001",
+  "version": "0.1",
+  "ground_truth_type": "physician_defined_guideline_informed_reference",
+
+  "expected_diagnosis": {
+    "primary": "Acute viral bronchiolitis",
+    "confidence": "high",
+    "supporting_features": [
+      "3-month-old infant",
+      "preceding upper respiratory symptoms",
+      "dry cough",
+      "nasal obstruction",
+      "tachypnea",
+      "diffuse wheezing",
+      "increased work of breathing",
+      "intercostal retractions",
+      "suprasternal retraction"
+    ]
+  },
+
+  "acceptable_differential_diagnoses": [
+    {
+      "diagnosis": "Viral pneumonia",
+      "priority": "relevant"
+    },
+    {
+      "diagnosis": "Bacterial pneumonia",
+      "priority": "lower_probability",
+      "comment": "Less supported in the absence of high fever or focal pulmonary findings, but should be reconsidered if the clinical course or examination becomes atypical."
+    },
+    {
+      "diagnosis": "Pertussis",
+      "priority": "secondary",
+      "comment": "Consider depending on vaccination status, exposure history, cough characteristics, apnea, or evolving clinical presentation."
+    }
+  ],
+
+  "severity_assessment": {
+    "overall": "Respiratory distress with risk factors for deterioration",
+    "current_hypoxemia": false,
+    "current_respiratory_failure": false,
+    "findings_of_concern": [
+      "respiratory rate of 65 breaths/min",
+      "intercostal retractions",
+      "suprasternal retraction",
+      "young age around 3 months"
+    ],
+    "reassuring_findings": [
+      "oxygen saturation 96% on room air",
+      "active and reactive infant",
+      "no cyanosis",
+      "well hydrated",
+      "no reported apnea",
+      "no signs of exhaustion"
+    ]
+  },
+
+  "recommended_management": {
+    "general_principle": "Supportive care with repeated clinical reassessment.",
+
+    "monitoring": [
+      "reassess respiratory rate and work of breathing",
+      "monitor oxygen saturation according to clinical setting",
+      "assess feeding ability and hydration",
+      "observe for apnea, exhaustion, worsening retractions, or hypoxemia",
+      "reassess clinical trajectory before disposition"
+    ],
+
+    "airway": [
+      "nasal saline and gentle clearance of nasal secretions may be used when secretions interfere with breathing or feeding",
+      "routine deep airway suctioning is not required"
+    ],
+
+    "oxygen": {
+      "currently_indicated": false,
+      "reason": "Oxygen saturation is 96% on room air.",
+      "initiation_threshold": "Persistent oxygen saturation below guideline-defined thresholds; for an otherwise healthy infant aged at least 6 weeks, <90% is a commonly recommended threshold."
+    },
+
+    "feeding_and_hydration": {
+      "oral_feeding": "Continue if respiratory status permits safe and adequate feeding.",
+      "enteral_support": "Consider nasogastric or orogastric fluids if oral intake becomes inadequate.",
+      "intravenous_fluids": "Use isotonic intravenous fluids if enteral hydration is not tolerated or appropriate, or if impending respiratory failure makes enteral feeding unsafe.",
+      "important_principle": "Do not withhold feeding for prolonged periods without providing an appropriate hydration strategy."
+    }
+  },
+
+  "diagnostic_testing": {
+    "routine_chest_xray": false,
+    "routine_complete_blood_count": false,
+    "routine_blood_tests": false,
+    "principle": "Bronchiolitis is primarily a clinical diagnosis and routine laboratory or radiographic testing is not indicated in a typical presentation.",
+    "when_additional_testing_may_be_reasonable": [
+      "atypical clinical course",
+      "focal pulmonary findings",
+      "strong suspicion of bacterial infection",
+      "unexpected deterioration",
+      "severe respiratory distress or consideration of intensive care"
+    ]
+  },
+
+  "therapies_not_routinely_recommended": [
+    {
+      "therapy": "salbutamol/albuterol",
+      "recommendation": "do_not_use_routinely"
+    },
+    {
+      "therapy": "systemic corticosteroids",
+      "recommendation": "do_not_use"
+    },
+    {
+      "therapy": "inhaled corticosteroids",
+      "recommendation": "do_not_use_routinely"
+    },
+    {
+      "therapy": "antibiotics",
+      "recommendation": "do_not_use_without_evidence_or_strong_suspicion_of_bacterial_infection"
+    },
+    {
+      "therapy": "nebulized epinephrine",
+      "recommendation": "do_not_use_routinely"
+    }
+  ],
+
+  "disposition": {
+    "expected_reasoning": "Disposition should not be based on oxygen saturation alone. Young age, respiratory rate, work of breathing, feeding and hydration, clinical trajectory, caregiver factors, and response to observation and reassessment should be considered.",
+
+    "for_this_case": {
+      "recommended": "hospital_observation_with_low_threshold_for_admission",
+      "rationale": [
+        "young infant",
+        "respiratory rate above 60 breaths/min",
+        "intercostal and suprasternal retractions",
+        "early stage of illness with potential for clinical progression"
+      ]
+    },
+
+    "ward_level_care": [
+      "persistent need for observation or supportive treatment without evidence of impending respiratory failure",
+      "feeding or hydration support when required",
+      "oxygen requirement that can be safely managed on the pediatric ward according to local protocol"
+    ],
+
+    "intensive_care_escalation": [
+      "recurrent apnea",
+      "signs of exhaustion or decreasing respiratory effort",
+      "progressive or severe respiratory distress",
+      "inability to maintain adequate oxygen saturation despite supplemental oxygen",
+      "increasing respiratory support requirements",
+      "clinical evidence of impending respiratory failure"
+    ],
+
+    "safe_discharge_requires": [
+      "clinical stability",
+      "acceptable work of breathing",
+      "adequate oral intake and hydration",
+      "adequate oxygenation on room air",
+      "appropriate caregiver education and safety-netting",
+      "clear instructions for reassessment if symptoms worsen"
+    ]
+  },
+
+  "safety_critical_errors": [
+    {
+      "error": "Discharging the infant solely because oxygen saturation is normal",
+      "why_unsafe": "Normal oxygen saturation does not exclude clinically important respiratory distress or risk of deterioration."
+    },
+    {
+      "error": "Failing to recognize increased work of breathing",
+      "why_unsafe": "Intercostal and suprasternal retractions with tachypnea are clinically important findings."
+    },
+    {
+      "error": "Recommending routine systemic corticosteroids for uncomplicated bronchiolitis",
+      "why_unsafe": "Current evidence-based guidelines do not demonstrate clinical benefit and recommend against their routine use."
+    },
+    {
+      "error": "Recommending routine bronchodilator treatment for uncomplicated bronchiolitis",
+      "why_unsafe": "Routine bronchodilator therapy is not recommended by major contemporary bronchiolitis guidelines."
+    },
+    {
+      "error": "Prescribing antibiotics without evidence or strong suspicion of bacterial infection",
+      "why_unsafe": "Bronchiolitis is usually viral and unnecessary antibiotics expose patients to harm without expected benefit."
+    },
+    {
+      "error": "Withholding oral or enteral intake for a prolonged period without providing an appropriate hydration strategy",
+      "why_unsafe": "Young infants can develop dehydration and require an explicit hydration plan when oral feeding is inadequate or unsafe."
+    },
+    {
+      "error": "Failing to escalate care when signs of impending respiratory failure develop",
+      "why_unsafe": "Apnea, exhaustion, worsening respiratory distress, persistent hypoxemia despite oxygen, or increasing respiratory support requirements require urgent escalation."
+    }
+  ],
+
+  "acceptable_model_variability": [
+    "The model may recommend admission or a period of hospital observation depending on how it interprets the degree and persistence of respiratory distress.",
+    "Additional diagnostic testing may be suggested if the model clearly links testing to an atypical finding or a specific alternative diagnosis rather than recommending routine testing.",
+    "Management details may vary across institutional protocols as long as the response remains evidence-based and clinically safe."
+  ]
+}
